@@ -18,7 +18,6 @@
   "dependencies": {
     "chalk": "^4.1.1",
     "cli-progress": "^3.9.0",
-    "inquirer": "^8.0.0",
-    "package-json": "^6.5.0"
+    "inquirer": "^8.0.0"
   }
 }
