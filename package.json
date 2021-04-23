@@ -1,0 +1,23 @@
+{
+  "name": "react-project-automation",
+  "version": "0.1.0",
+  "description": "Project that automatize create projects with nextjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "keywords": [
+    "automatization",
+    "nextjs",
+    "reactjs",
+    "cli"
+  ],
+  "author": "codax",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "cli-progress": "^3.9.0",
+    "inquirer": "^8.0.0"
+  }
+}
