@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/index.js"
+    "start": "node --experimental-json-modules src/index.mjs"
   },
   "keywords": [
     "automatization",
@@ -19,6 +19,7 @@
     "chalk": "^4.1.1",
     "cli-progress": "^3.9.0",
     "figlet": "^1.5.0",
-    "inquirer": "^8.0.0"
+    "inquirer": "^8.0.0",
+    "ora": "^5.4.0"
   }
 }
