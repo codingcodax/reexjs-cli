@@ -67,7 +67,7 @@ const init = async () => {
         if (pages) nextPages(pages, appName, directory);
 
         // set up useContext hook
-        if (isUseContextNeeded) setUpUseContext(framework, useContextName);
+        // if (isUseContextNeeded) setUpUseContext(framework, useContextName);
 
         // set up folder structure
         if (predefinedFolders.length !== 0 || additionalFolders)

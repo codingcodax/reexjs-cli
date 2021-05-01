@@ -34,19 +34,19 @@ const questions = [
         default: 'home about contact',
         when: (answers) => answers.framework === 'Next.js',
     },
-    {
-        type: 'confirm',
-        name: 'isUseContextNeeded',
-        message: 'Do you need useContext hook?:',
-        default: true,
-    },
-    {
-        type: 'input',
-        name: 'useContextName',
-        message: 'Choose a name for useContext:',
-        default: 'AuthContext',
-        when: (answers) => answers.isUseContextNeeded
-    },
+    // {
+    //     type: 'confirm',
+    //     name: 'isUseContextNeeded',
+    //     message: 'Do you need useContext hook?:',
+    //     default: true,
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'useContextName',
+    //     message: 'Choose a name for useContext:',
+    //     default: 'AuthContext',
+    //     when: (answers) => answers.isUseContextNeeded
+    // },
     {
         type: 'checkbox',
         name: 'predefinedFolders',
