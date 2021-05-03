@@ -1,6 +1,6 @@
 {
   "name": "reexjs-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An interactive CLI automation toll for create react projects most fast and efficiently. ⚛️",
   "main": "src/index.mjs",
   "scripts": {
@@ -11,10 +11,22 @@
     "automatization",
     "nextjs",
     "reactjs",
-    "cli"
+    "react-router-dom",
+    "cli",
+    "es6",
+    "tool",
+    "react"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a12989x/reexjs-cli.git"
+  },
   "author": "codax",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a12989x/reexjs-cli/issues"
+  },
+  "homepage": "https://github.com/a12989x/reexjs-cli#readme",
   "dependencies": {
     "chalk": "^4.1.1",
     "cli-progress": "^3.9.0",
