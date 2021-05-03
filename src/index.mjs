@@ -91,7 +91,7 @@ const init = async () => {
         // ending note
         console.log(`\n${complete} ${chalk.green(directory)}\n`);
         console.log(thanks);
-        // console.log(`${raiseIssue}\n`);
+        console.log(`${raiseIssue}\n`);
     } catch (err) {
         console.error(err.message);
     }
