@@ -1,6 +1,6 @@
 import { writeFileSync } from 'fs';
 
-import pagesTemplate from '../constants/templates/pagesTemplate';
+import pagesTemplate from '../constants/templates/pagesTemplate.mjs';
 
 const nextPages = (pages, appName, directory) => {
     const pagesArray = pages
