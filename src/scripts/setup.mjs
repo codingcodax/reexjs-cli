@@ -1,4 +1,5 @@
 import inquirer from 'inquirer';
+import { checkUpperAndName, checkUpper } from '../utils/validate.mjs';
 
 const questions = [
     {
@@ -6,6 +7,7 @@ const questions = [
         name: 'appName',
         message: 'Choose the app name:',
         default: 'reexjs-app',
+        validate: checkUpper,
     },
     {
         type: 'list',
@@ -26,6 +28,7 @@ const questions = [
         message: 'Enter space separated route names:',
         default: 'home about contact',
         when: (answers) => answers.isRoutingNeeded,
+        validate: checkUpperAndName,
     },
     {
         type: 'input',
@@ -33,6 +36,7 @@ const questions = [
         message: 'Enter space separated page names',
         default: 'home about contact',
         when: (answers) => answers.framework === 'Next.js',
+        validate: checkUpperAndName,
     },
     // {
     //     type: 'confirm',
@@ -58,6 +62,7 @@ const questions = [
         name: 'additionalFolders',
         message:
             "Enter space separated additional folder(s) you'd like to have:",
+        validate: checkUpperAndName,
     },
     {
         type: 'input',
