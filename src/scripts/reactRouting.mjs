@@ -1,9 +1,8 @@
 import { writeFileSync } from 'fs';
 
 import { installDependencies, routesMkdir } from '../constants/commands.mjs';
-import { pagesTemplate, appJsTemplate } from '../constants/templates.mjs';
 import pagesTemplate from '../constants/templates/pagesTemplate.mjs';
-import appJsTemplate from '../constants/templates/appJsTemplate';
+import appJsTemplate from '../constants/templates/appJsTemplate.mjs';
 import runSpawn from '../utils/runSpawn.mjs';
 
 const reactRouting = async (routes, appName, directory) => {
