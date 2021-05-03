@@ -21,7 +21,7 @@ const init = async () => {
         font: 'ANSI Shadow',
     });
 
-    console.log(`\n${chalk.cyan(asciiArt)}`);
+    console.log(`\n${chalk.magentaBright(asciiArt)}`);
     console.log(chalk.green(`(v${packageConfig.version})\n`));
 
     //  Greetings
