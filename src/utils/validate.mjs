@@ -13,10 +13,7 @@ const checkNumber = (value) => {
 };
 
 export const checkUpperAndName = (value) => {
-    // if (checkUpper(value) === true && checkNumber(value) === true) return true;
-
-    checkUpper(value);
-    checkNumber(value);
+    if (checkUpper(value) === true && checkNumber(value) === true) return true;
 
     return 'Please enter a valid name';
 };
