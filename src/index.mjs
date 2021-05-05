@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import { platform } from 'os';
 import chalk from 'chalk';
 import figlet from 'figlet';
