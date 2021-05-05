@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node --experimental-json-modules
 import { platform } from 'os';
 import chalk from 'chalk';
 import figlet from 'figlet';
