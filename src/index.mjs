@@ -1,9 +1,9 @@
-#!/usr/bin/env node --experimental-json-modules
+#!/usr/bin/env node
 import { platform } from 'os';
 import chalk from 'chalk';
 import figlet from 'figlet';
 
-import packageConfig from '../package.json';
+// import packageConfig from '../package.json';
 import { name, messages, features } from './messages.mjs';
 
 import handleSetup from './scripts/setup.mjs';
@@ -23,7 +23,7 @@ const init = async () => {
     });
 
     console.log(`\n${chalk.magentaBright(asciiArt)}`);
-    console.log(chalk.green(`(v${packageConfig.version})\n`));
+    // console.log(chalk.green(`(v${packageConfig.version})\n`));
 
     //  Greetings
     console.log(`${welcome}\n`);
