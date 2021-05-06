@@ -1,9 +1,11 @@
 {
   "name": "reexjs-cli",
-  "version": "0.1.7",
+  "version": "0.2.0",
   "description": "An interactive CLI automation toll for create react projects most fast and efficiently. ⚛️",
   "main": "src/index.mjs",
-  "bin": {"reexjs-cli": "src/index.mjs"},
+  "bin": {
+    "reexjs-cli": "src/index.mjs"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --experimental-json-modules src/index.mjs start",
@@ -35,5 +37,11 @@
     "figlet": "^1.5.0",
     "inquirer": "^8.0.0",
     "ora": "^5.4.0"
+  },
+  "devDependencies": {
+    "husky": "^6.0.0",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "reexjs-app": "file:reexjs-app"
   }
 }
