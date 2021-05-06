@@ -1,11 +1,9 @@
-import { foldersMkdir } from '../constants/commands.mjs';
-import runSpawn from '../utils/runSpawn.mjs';
+import { mkdir } from 'fs';
 
 const writeFolderStructure = async (
     framework,
     predefinedFolders,
     additionalFolders,
-    appName,
     directory
 ) => {
     let allFolders = [...predefinedFolders];
@@ -13,16 +11,17 @@ const writeFolderStructure = async (
     allFolders = allFolders.filter((folder) => folder.length > 0);
 
     if (framework === 'Next.js')
-        foldersMkdir.args = allFolders.map(
-            (folder) => `${directory}/${folder}`
-        );
+        allFolders.map((folder) => {
+            mkdir(`${directory}/${folder}`, { recursive: true }, (err) => {
+                if (err) throw err;
+            });
+        });
     else if (framework === 'React.js')
-        foldersMkdir.args = allFolders.map(
-            (folder) => `${directory}/src/${folder}`
-        );
-
-    if (allFolders.length !== 0)
-        await runSpawn(foldersMkdir, appName, directory);
+        allFolders.map((folder) => {
+            mkdir(`${directory}/src/${folder}`, { recursive: true }, (err) => {
+                if (err) throw err;
+            });
+        });
 };
 
 export default writeFolderStructure;
