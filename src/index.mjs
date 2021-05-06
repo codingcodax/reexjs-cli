@@ -76,7 +76,6 @@ const init = async () => {
                 framework,
                 predefinedFolders,
                 additionalFolders,
-                appName,
                 directory
             );
 
@@ -85,7 +84,6 @@ const init = async () => {
             await installAllDependencies(
                 dependencies,
                 devDependencies,
-                appName,
                 directory
             );
 
