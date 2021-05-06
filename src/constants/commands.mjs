@@ -22,14 +22,6 @@ export const routesMkdir = {
     err: 'Error to create pages directory',
 };
 
-export const foldersMkdir = {
-    cmd: 'mkdir',
-    args: [],
-    msg: 'Creating folders',
-    success: 'Folders created successfully',
-    err: 'Error to create Folders',
-};
-
 export const installDependencies = (dependencies) => {
     const command = {
         cmd: 'npm',
