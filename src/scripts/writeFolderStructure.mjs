@@ -1,4 +1,5 @@
 import { mkdirSync } from 'fs';
+import ora from 'ora';
 
 const writeFolderStructure = async (
     framework,
@@ -10,13 +11,16 @@ const writeFolderStructure = async (
     additionalFolders.split(' ').map((folder) => allFolders.push(folder));
     allFolders = allFolders.filter((folder) => folder.length > 0);
 
-    if (framework === 'Next.js')
+    const spinner = ora('Writing folder structure...').start();
+    spinner.start();
+
+    if (framework === 'Next.js') {
         allFolders.map((folder) => {
             mkdirSync(`${directory}/${folder}`, { recursive: true }, (err) => {
                 if (err) throw err;
             });
         });
-    else if (framework === 'React.js')
+    } else if (framework === 'React.js') {
         allFolders.map((folder) => {
             mkdirSync(
                 `${directory}/src/${folder}`,
@@ -26,6 +30,9 @@ const writeFolderStructure = async (
                 }
             );
         });
+    }
+
+    spinner.succeed('Folder created successfully!');
 };
 
 export default writeFolderStructure;
