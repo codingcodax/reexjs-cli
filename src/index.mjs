@@ -39,56 +39,58 @@ const init = async () => {
             isRoutingNeeded,
             routes,
             pages,
-            isUseContextNeeded,
-            useContextName,
             predefinedFolders,
             additionalFolders,
             dependencies,
             devDependencies,
         } = await handleSetup();
 
-        // ced for spawn process and directory where app would be installed
+        // cwd for spawn process and app directory where app would be installed
         const cwd = process.cwd();
-        const directory = `${process.cwd()}/${appName}`;
+        const appDirectory = `${process.cwd()}/${appName}`;
 
-        // notify user about the directory
+        // notify user about the app directory
         console.log(
-            `\nSetting up a new ${chalk.bold(framework)} app in ${chalk.green(
-                directory
-            )}\n`
+            `\nSetting up a new ${chalk.bold.green(
+                framework
+            )} app in ${chalk.green(appDirectory)}\n\nTake a ☕ and relax.\n`
         );
 
         // Installing framework
         await installFramework(framework, appName, cwd);
 
         // set up routes if is needed
-        if (isRoutingNeeded) await reactRouting(routes, appName, directory);
+        if (isRoutingNeeded) await reactRouting(routes, appName, appDirectory);
 
         // Create pages for the Next.js framework
-        if (pages) nextPages(pages, appName, directory);
-
-        // set up useContext hook
-        // if (isUseContextNeeded) setUpUseContext(framework, useContextName);
+        if (pages) nextPages(pages, appName, appDirectory);
 
         // set up folder structure
-        if (predefinedFolders.length !== 0 || additionalFolders)
+        if (predefinedFolders.length !== 0 || additionalFolders) {
             await writeFolderStructure(
                 framework,
                 predefinedFolders,
                 additionalFolders,
-                directory
+                appDirectory
             );
+        }
 
         // install dependencies and dev dependencies
-        if (dependencies || devDependencies)
+        if (dependencies || devDependencies) {
             await installAllDependencies(
                 dependencies,
                 devDependencies,
-                directory
+                appDirectory
             );
+        }
 
         // ending note
-        console.log(`\n${complete} ${chalk.green(directory)}\n`);
+        console.log(`\n${complete} ${chalk.green(appDirectory)}\n`);
+        console.log(
+            `Please go to ${chalk.bold.green(
+                appName
+            )} and start your new project!\n`
+        );
         console.log(thanks);
         console.log(`${raiseIssue}\n`);
     } catch (err) {
