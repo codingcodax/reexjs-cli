@@ -37,11 +37,5 @@
     "figlet": "^1.5.0",
     "inquirer": "^8.0.0",
     "ora": "^5.4.0"
-  },
-  "devDependencies": {
-    "husky": "^6.0.0",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1",
-    "reexjs-app": "file:reexjs-app"
   }
 }
