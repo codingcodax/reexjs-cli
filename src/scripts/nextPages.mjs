@@ -1,11 +1,12 @@
 import { writeFileSync } from 'fs';
 
 import pagesTemplate from '../constants/templates/pagesTemplate.mjs';
+import { capitalizeFirstLetter } from '../utils/helpers.mjs';
 
 const nextPages = (pages, appName, directory) => {
     const pagesArray = pages
         .split(' ')
-        .map((route) => route.replace(/^\w/, (c) => c.toUpperCase()))
+        .map((route) => capitalizeFirstLetter(route))
         .filter((page) => page !== 'Home');
 
     // create next pages components
