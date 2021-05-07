@@ -30,10 +30,10 @@
   "bugs": {
     "url": "https://github.com/a12989x/reexjs-cli/issues"
   },
+  "type": "module",
   "homepage": "https://github.com/a12989x/reexjs-cli#readme",
   "dependencies": {
     "chalk": "^4.1.1",
-    "cli-progress": "^3.9.0",
     "figlet": "^1.5.0",
     "inquirer": "^8.0.0",
     "ora": "^5.4.0"
