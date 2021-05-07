@@ -5,7 +5,7 @@ const writeFolderStructure = async (
     framework,
     predefinedFolders,
     additionalFolders,
-    directory
+    appDirectory
 ) => {
     let allFolders = [...predefinedFolders];
     additionalFolders.split(' ').map((folder) => allFolders.push(folder));
@@ -16,14 +16,18 @@ const writeFolderStructure = async (
 
     if (framework === 'Next.js') {
         allFolders.map((folder) => {
-            mkdirSync(`${directory}/${folder}`, { recursive: true }, (err) => {
-                if (err) throw err;
-            });
+            mkdirSync(
+                `${appDirectory}/${folder}`,
+                { recursive: true },
+                (err) => {
+                    if (err) throw err;
+                }
+            );
         });
     } else if (framework === 'React.js') {
         allFolders.map((folder) => {
             mkdirSync(
-                `${directory}/src/${folder}`,
+                `${appDirectory}/src/${folder}`,
                 { recursive: true },
                 (err) => {
                     if (err) throw err;

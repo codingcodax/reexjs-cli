@@ -6,19 +6,19 @@ import appJsTemplate from '../constants/templates/appJsTemplate.mjs';
 import runSpawn from '../utils/runSpawn.mjs';
 import { capitalizeFirstLetter } from '../utils/helpers.mjs';
 
-const reactRouting = async (routes, appName, directory) => {
+const reactRouting = async (routes, appName, appDirectory) => {
     const routesArray = routes
         .split(' ')
         .map((route) => capitalizeFirstLetter(route));
 
     routesMkdir.args = [
-        `${directory}/src/components`,
-        `${directory}/src/components/pages`,
+        `${appDirectory}/src/components`,
+        `${appDirectory}/src/components/pages`,
     ];
 
     // create folders (components/pages)
     mkdirSync(
-        `${directory}/src/components/pages`,
+        `${appDirectory}/src/components/pages`,
         { recursive: true },
         (err) => {
             if (err) throw err;
@@ -29,7 +29,7 @@ const reactRouting = async (routes, appName, directory) => {
     try {
         const data = routesArray.map((route) => {
             writeFileSync(
-                `${directory}/src/components/pages/${route}.js`,
+                `${appDirectory}/src/components/pages/${route}.js`,
                 pagesTemplate(route)
             );
         });
@@ -38,12 +38,12 @@ const reactRouting = async (routes, appName, directory) => {
     }
 
     // install react-router-dom dependency
-    await runSpawn(installDependencies('react-router-dom'), null, directory);
+    await runSpawn(installDependencies('react-router-dom'), null, appDirectory);
 
     // edit App component
     try {
         const data = writeFileSync(
-            `${directory}/src/App.js`,
+            `${appDirectory}/src/App.js`,
             appJsTemplate(routesArray)
         );
     } catch (err) {

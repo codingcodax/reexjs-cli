@@ -7,10 +7,10 @@ import runSpawn from '../utils/runSpawn.mjs';
 const installAllDependencies = async (
     dependencies,
     devDependencies,
-    directory
+    appDirectory
 ) => {
-    await runSpawn(installDependencies(dependencies), null, directory);
-    await runSpawn(installDevDependencies(devDependencies), null, directory);
+    await runSpawn(installDependencies(dependencies), null, appDirectory);
+    await runSpawn(installDevDependencies(devDependencies), null, appDirectory);
 };
 
 export default installAllDependencies;

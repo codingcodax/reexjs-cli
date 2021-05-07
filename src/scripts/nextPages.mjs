@@ -3,7 +3,7 @@ import { writeFileSync } from 'fs';
 import pagesTemplate from '../constants/templates/pagesTemplate.mjs';
 import { capitalizeFirstLetter } from '../utils/helpers.mjs';
 
-const nextPages = (pages, appName, directory) => {
+const nextPages = (pages, appName, appDirectory) => {
     const pagesArray = pages
         .split(' ')
         .map((route) => capitalizeFirstLetter(route))
@@ -13,7 +13,7 @@ const nextPages = (pages, appName, directory) => {
     try {
         const data = pagesArray.map((page) => {
             writeFileSync(
-                `${directory}/pages/${page.toLowerCase()}.js`,
+                `${appDirectory}/pages/${page.toLowerCase()}.js`,
                 pagesTemplate(page)
             );
         });
