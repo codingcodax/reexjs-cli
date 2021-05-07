@@ -1,4 +1,4 @@
-import { writeFileSync } from 'fs';
+import { mkdirSync, writeFileSync } from 'fs';
 
 import { installDependencies, routesMkdir } from '../constants/commands.mjs';
 import pagesTemplate from '../constants/templates/pagesTemplate.mjs';
@@ -16,7 +16,10 @@ const reactRouting = async (routes, appName, directory) => {
     ];
 
     // create folders (components/pages)
-    await runSpawn(routesMkdir, appName, directory);
+    mkdirSync(`${directory}/src/components/pages`, { recursive: true }, (err) => {
+                if (err) throw err;
+            });
+    
 
     // create react pages components
     try {
@@ -31,7 +34,7 @@ const reactRouting = async (routes, appName, directory) => {
     }
 
     // install react-router-dom dependency
-    await runSpawn(installDependencies('react-router-dom'), appName, directory);
+    await runSpawn(installDependencies('react-router-dom'), null, directory);
 
     // edit App component
     try {
