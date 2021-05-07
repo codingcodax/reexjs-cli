@@ -4,11 +4,12 @@ import { installDependencies, routesMkdir } from '../constants/commands.mjs';
 import pagesTemplate from '../constants/templates/pagesTemplate.mjs';
 import appJsTemplate from '../constants/templates/appJsTemplate.mjs';
 import runSpawn from '../utils/runSpawn.mjs';
+import { capitalizeFirstLetter } from '../utils/helpers.mjs';
 
 const reactRouting = async (routes, appName, directory) => {
     const routesArray = routes
         .split(' ')
-        .map((route) => route.replace(/^\w/, (c) => c.toUpperCase()));
+        .map((route) => capitalizeFirstLetter(route));
 
     routesMkdir.args = [
         `${directory}/src/components`,
@@ -16,10 +17,13 @@ const reactRouting = async (routes, appName, directory) => {
     ];
 
     // create folders (components/pages)
-    mkdirSync(`${directory}/src/components/pages`, { recursive: true }, (err) => {
-                if (err) throw err;
-            });
-    
+    mkdirSync(
+        `${directory}/src/components/pages`,
+        { recursive: true },
+        (err) => {
+            if (err) throw err;
+        }
+    );
 
     // create react pages components
     try {
