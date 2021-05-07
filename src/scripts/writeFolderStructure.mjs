@@ -1,4 +1,4 @@
-import { mkdir } from 'fs';
+import { mkdirSync } from 'fs';
 
 const writeFolderStructure = async (
     framework,
@@ -12,15 +12,19 @@ const writeFolderStructure = async (
 
     if (framework === 'Next.js')
         allFolders.map((folder) => {
-            mkdir(`${directory}/${folder}`, { recursive: true }, (err) => {
+            mkdirSync(`${directory}/${folder}`, { recursive: true }, (err) => {
                 if (err) throw err;
             });
         });
     else if (framework === 'React.js')
         allFolders.map((folder) => {
-            mkdir(`${directory}/src/${folder}`, { recursive: true }, (err) => {
-                if (err) throw err;
-            });
+            mkdirSync(
+                `${directory}/src/${folder}`,
+                { recursive: true },
+                (err) => {
+                    if (err) throw err;
+                }
+            );
         });
 };
 
