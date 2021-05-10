@@ -1,6 +1,6 @@
 <h1>
     <a href="https://www.npmjs.com/package/reexjs-cli" target="_blank">
-      <img alt="ReexJs logo" src="https://github.com/a12989x/reexjs-cli/blob/main/docs/images/logo.png?raw=true" />
+      <img alt="ReexJs logo" src="https://github.com/a12989x/reexjs-cli/blob/main/docs/images/logo.png?raw=true" align="center" />
     </a>
 </h1>
 
