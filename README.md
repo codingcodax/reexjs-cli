@@ -1,8 +1,6 @@
-<h1>
-    <a href="https://www.npmjs.com/package/reexjs-cli" target="_blank">
-      <img alt="ReexJs logo" src="https://github.com/a12989x/reexjs-cli/blob/main/docs/images/logo.png?raw=true" align="center" />
-    </a>
-</h1>
+<a href="https://www.npmjs.com/package/reexjs-cli" target="_blank">
+	<img alt="ReexJs logo" src="https://github.com/a12989x/reexjs-cli/blob/main/docs/images/logo.png?raw=true" align="center" height="211" width="624" />
+</a>
 
 [![npm](https://img.shields.io/npm/v/reexjs-cli?style=flat&logo=appveyor)](https://www.npmjs.com/package/reexjs-cli)
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?style=flat&logo=appveyor)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
