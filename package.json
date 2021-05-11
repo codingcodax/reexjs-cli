@@ -1,10 +1,10 @@
 {
     "name": "reexjs-cli",
-    "version": "0.3.9",
+    "version": "0.4.0",
     "description": "An interactive CLI automation tool 🛠️ for create react projects most fast and efficiently. ⚛️",
     "main": "src/index.mjs",
     "bin": {
-        "reexjs-cli": "lib/index.mjs"
+        "reexjs-cli": "src/index.mjs"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
