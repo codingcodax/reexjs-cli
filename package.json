@@ -21,10 +21,6 @@
         "tool",
         "react"
     ],
-    "files": [
-        "lib",
-        "src"
-    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/a12989x/reexjs-cli.git"
