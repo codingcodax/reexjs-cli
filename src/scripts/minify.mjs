@@ -2,14 +2,15 @@ import glob from 'glob';
 import { minify } from 'terser';
 import { mkdirSync, readFileSync, writeFileSync } from 'fs';
 
-const cwd = process.cwd();
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const cwd = __dirname.slice(0, -12);
 
 const globOptions = { ignore: ['**/node_modules/**'] };
 const minifyOptions = { compress: true, mangle: true };
 
 glob('src/**/*.mjs', globOptions, (er, files) => {
-    console.log(cwd);
-
     files.map(async (file) => {
         const fileDirectory = `${cwd}/${file.replace('src', 'lib')}`;
         const folderDirectory = fileDirectory.slice(
