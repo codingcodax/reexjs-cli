@@ -9,7 +9,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "node --experimental-json-modules src/index.mjs start",
-        "build": "node --experimental-json-modules src/scripts/minify.mjs start"
+        "build": "node --experimental-json-modules src/scripts/minify.mjs"
     },
     "keywords": [
         "automatization",
@@ -22,7 +22,8 @@
         "react"
     ],
     "files": [
-        "lib"
+        "lib",
+        "src"
     ],
     "repository": {
         "type": "git",
