@@ -6,13 +6,15 @@ import figlet from 'figlet';
 // import packageConfig from '../package.json';
 import { name, messages, features } from './messages.mjs';
 
-import handleSetup from './scripts/setup.mjs';
-import installFramework from './scripts/installFramework.mjs';
-import reactRouting from './scripts/reactRouting.mjs';
-import nextPages from './scripts/nextPages.mjs';
-import setUpUseContext from './scripts/setUpUseContext.mjs';
-import writeFolderStructure from './scripts/writeFolderStructure.mjs';
-import installAllDependencies from './scripts/installAllDependencies.mjs';
+// import all scripts
+import {
+    setup,
+    installFramework,
+    reactRouting,
+    nextPages,
+    writeFolderStructure,
+    installAllDependencies,
+} from './scripts/index.mjs';
 
 const init = async () => {
     const { thanks, welcome, complete, raiseIssue, walkThrough } = messages;
@@ -43,7 +45,7 @@ const init = async () => {
             additionalFolders,
             dependencies,
             devDependencies,
-        } = await handleSetup();
+        } = await setup();
 
         // cwd for spawn process and app directory where app would be installed
         const cwd = process.cwd();
