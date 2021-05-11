@@ -7,7 +7,7 @@ const cwd = process.cwd();
 const globOptions = { ignore: ['**/node_modules/**'] };
 const minifyOptions = { compress: true, mangle: true };
 
-glob('**/*.mjs', globOptions, (er, files) => {
+glob('src/**/*.mjs', globOptions, (er, files) => {
     files.map(async (file) => {
         const fileDirectory = `${cwd}/${file.replace('src', 'lib')}`;
         const folderDirectory = fileDirectory.slice(
