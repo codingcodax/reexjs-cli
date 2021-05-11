@@ -1,6 +1,6 @@
 {
   "name": "reexjs-cli",
-  "version": "0.3.2",
+  "version": "0.3.1",
   "description": "An interactive CLI automation tool 🛠️ for create react projects most fast and efficiently. ⚛️",
   "main": "lib/index.mjs",
   "bin": {
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --experimental-json-modules src/index.mjs start",
-    "build": "node --experimental-json-modules src/scripts/minify.mjs"
+    "build": "node --experimental-json-modules src/scripts/minify.mjs && npm pack --dry-run"
   },
   "keywords": [
     "automatization",
