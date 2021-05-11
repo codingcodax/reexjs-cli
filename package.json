@@ -1,6 +1,6 @@
 {
   "name": "reexjs-cli",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "An interactive CLI automation tool 🛠️ for create react projects most fast and efficiently. ⚛️",
   "main": "lib/index.mjs",
   "bin": {
