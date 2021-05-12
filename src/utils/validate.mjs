@@ -12,8 +12,20 @@ const checkNumber = (value) => {
     return 'Please enter a valid name';
 };
 
-export const checkUpperAndName = (value) => {
-    if (checkUpper(value) === true && checkNumber(value) === true) return true;
+const checkSymbols = (value) => {
+    const regex = /[\?/.]/gm;
+    if (!regex.test(value)) return true;
+
+    return 'Please enter a valid name';
+};
+
+export const validateValue = (value) => {
+    if (
+        checkUpper(value) === true &&
+        checkNumber(value) === true &&
+        checkSymbols(value) === true
+    )
+        return true;
 
     return 'Please enter a valid name';
 };
