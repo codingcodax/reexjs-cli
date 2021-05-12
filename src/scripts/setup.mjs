@@ -1,5 +1,5 @@
 import inquirer from 'inquirer';
-import { checkUpperAndName, checkUpper } from '../utils/validate.mjs';
+import { validateValue, checkUpper } from '../utils/validate.mjs';
 
 const questions = [
     {
@@ -28,7 +28,7 @@ const questions = [
         message: 'Enter space separated route names:',
         default: 'home about contact',
         when: (answers) => answers.isRoutingNeeded,
-        validate: checkUpperAndName,
+        validate: validateValue,
     },
     {
         type: 'input',
@@ -36,21 +36,8 @@ const questions = [
         message: 'Enter space separated page names',
         default: 'home about contact',
         when: (answers) => answers.framework === 'Next.js',
-        validate: checkUpperAndName,
+        validate: validateValue,
     },
-    // {
-    //     type: 'confirm',
-    //     name: 'isUseContextNeeded',
-    //     message: 'Do you need useContext hook?:',
-    //     default: true,
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'useContextName',
-    //     message: 'Choose a name for useContext:',
-    //     default: 'AuthContext',
-    //     when: (answers) => answers.isUseContextNeeded
-    // },
     {
         type: 'checkbox',
         name: 'predefinedFolders',
@@ -62,7 +49,7 @@ const questions = [
         name: 'additionalFolders',
         message:
             "Enter space separated additional folder(s) you'd like to have:",
-        validate: checkUpperAndName,
+        validate: validateValue,
     },
     {
         type: 'input',
