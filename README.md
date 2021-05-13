@@ -1,6 +1,5 @@
 <h1>
     <a href="https://www.npmjs.com/package/reexjs-cli" target="_blank">
-      <!-- <img alt="ReexJs logo" src="https://github.com/a12989x/reexjs-cli/blob/main/docs/images/logo.png?raw=true" /> -->
       <img alt="ReexJs logo" src="./docs/images/logo.png" />
     </a>
 </h1>
@@ -8,14 +7,14 @@
 [![npm](https://img.shields.io/npm/v/reexjs-cli?style=flat&logo=appveyor)](https://www.npmjs.com/package/reexjs-cli)
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?style=flat&logo=appveyor)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 
-<h4 align="center">An interactive CLI automation tool 🛠️ for create react.js and next.js projects most fast and efficiently. ⚛️</h4>
+<h4 align="center">An interactive CLI automation tool 🛠️ for creating <a href="https://reactjs.org/" target="_blank">react.js</a> and <a href="https://nextjs.org/" target="_blank">next.js</a> projects most fast and efficiently. ⚛️</h4>
 
 <img alt="ReexJs logo" src="./docs/images/intro.gif" width="100%" />
 
 ## About ℹ️
 
 [ReexJs CLI](https://github.com/a12989x/reexjs-cli) is an interactive CLI that automates the process of creating a React / Next App.
-Usually developers We spent a lot of time installing dependencies, creating folders, etc., before having our initial configuration and start working on the application.
+Usually developers we spent a lot of time installing dependencies, creating folders, etc., before having our initial configuration and start working on the application.
 
 The goal of [ReexJs CLI](https://github.com/a12989x/reexjs-cli) It is that we can start working on our application without worrying about the initial configuration.
 
@@ -30,7 +29,7 @@ The goal of [ReexJs CLI](https://github.com/a12989x/reexjs-cli) It is that we ca
 
 ## Requirements 📝
 
--   [Node.js](https://nodejs.org/en/) `v14.16.1` installed on your system.
+-   [Node.js](https://nodejs.org/en/) installed on your system.
 -   An active internet connection for CLI to work.
 
 ## Installation 🚀
@@ -38,7 +37,7 @@ The goal of [ReexJs CLI](https://github.com/a12989x/reexjs-cli) It is that we ca
 From your terminal run:
 
 ```shell
-# install the package with  NPX
+# install the package with NPM
 $ npx reexjs-cli
 # or install it with YARN
 $ yarn reexjs-cli
@@ -49,7 +48,7 @@ $ yarn reexjs-cli
 ReexJs CLI installs reexjs-cli command in your system. To run the tool, you need to invoke this command from your terminal:
 
 ```shell
-# after your install it
+# if you install it globally
 $ reexjs-cli
 ```
 
