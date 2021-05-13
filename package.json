@@ -1,7 +1,7 @@
 {
     "name": "reexjs-cli",
-    "version": "0.9.1",
-    "description": "An interactive CLI automation tool 🛠️ for create react.js and next.js projects most fast and efficiently. ⚛️",
+    "version": "0.9.2",
+    "description": "An interactive CLI automation tool 🛠️ for creating react.js and next.js projects most fast and efficiently. ⚛️",
     "main": "lib/index.mjs",
     "bin": {
         "reexjs-cli": "lib/index.mjs"
@@ -28,7 +28,7 @@
         "type": "git",
         "url": "https://github.com/a12989x/reexjs-cli.git"
     },
-    "author": "codax",
+    "author": "Alexis Guzman codaxtech@gmail.com https://codax.vercel.app/",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/a12989x/reexjs-cli/issues"
@@ -40,7 +40,9 @@
         "figlet": "^1.5.0",
         "glob": "^7.1.7",
         "inquirer": "^8.0.0",
-        "ora": "^5.4.0",
+        "ora": "^5.4.0"
+    },
+    "devDependencies": {
         "terser": "^5.7.0"
     }
 }
