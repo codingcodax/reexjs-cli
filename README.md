@@ -1,6 +1,6 @@
 <h1>
     <a href="https://www.npmjs.com/package/reexjs-cli" target="_blank">
-      <img alt="ReexJs logo" src="./docs/images/logo.png" />
+      <img alt="ReexJs logo" src="./docs/_images/logo.png" />
     </a>
 </h1>
 
@@ -9,7 +9,7 @@
 
 <h4 align="center">An interactive CLI automation tool 🛠️ for creating <a href="https://reactjs.org/" target="_blank">react.js</a> and <a href="https://nextjs.org/" target="_blank">next.js</a> projects most fast and efficiently. ⚛️</h4>
 
-<img alt="ReexJs logo" src="./docs/images/intro.gif" width="100%" />
+<img alt="ReexJs logo" src="./docs/_images/intro.gif" width="100%" />
 
 ## About ℹ️
 
@@ -54,11 +54,11 @@ $ reexjs-cli
 
 As soon as run the command you are greeted by the CLI and you must choose between the options, the most approached your desired configuration.
 
-<img alt="ReexJs logo" src="./docs/images/greetings.png"  width="100%" />
+<img alt="ReexJs logo" src="./docs/_images/greetings.png"  width="100%" />
 
 Then you have to answer some questions to configure your react.js or next.js app
 
-<img alt="ReexJs logo" src="./docs/images/walk-trough.png"  width="100%" />
+<img alt="ReexJs logo" src="./docs/_images/walk-trough.png"  width="100%" />
 
 ### Config ⚙️
 
