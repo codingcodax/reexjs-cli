@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>ReexJs CLI</title>
+        <link rel="icon" href="_media/favicon.ico" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="description" content="Description" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+        />
+        <link
+            rel="stylesheet"
+            href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"
+        />
+    </head>
+    <body>
+        <div id="app"></div>
+        <script>
+            window.$docsify = {
+                name: 'ReexJs CLI',
+
+                // add the GitHub Corner widget in the top right corner of the site
+                repo: 'a12989x/reexjs-cli',
+
+                // logo
+                logo: './_images/logo.svg',
+
+                // scroll to the top
+                auto2top: true,
+
+                // display the file update date
+                formatUpdated: '{MM}/{DD} {HH}:{mm}',
+
+                // customize the theme color
+                themeColor: '#8D1FFC',
+
+                // load from _coverpage.md
+                coverpage: true,
+                onlyCover: true,
+
+                // load from _sidebar.md
+                loadSidebar: true,
+                maxLevel: 4,
+                subMaxLevel: 2,
+
+                // load from _footer.md
+                loadFooter: true,
+            };
+        </script>
+        <!-- Docsify v4 -->
+        <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+    </body>
+</html>
