@@ -3,6 +3,7 @@ import installFramework from './installFramework.mjs';
 import reactRouting from './reactRouting.mjs';
 import nextPages from './nextPages.mjs';
 import writeFolderStructure from './writeFolderStructure.mjs';
+import writeStyleScripting from './writeStyleScripting.mjs';
 import installAllDependencies from './installAllDependencies.mjs';
 
 export {
@@ -11,5 +12,6 @@ export {
     reactRouting,
     nextPages,
     writeFolderStructure,
+    writeStyleScripting,
     installAllDependencies,
 };
