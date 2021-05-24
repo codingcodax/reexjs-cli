@@ -49,7 +49,14 @@ const questions = [
         name: 'additionalFolders',
         message:
             "Enter space separated additional folder(s) you'd like to have:",
+        default: 'context hooks',
         validate: validateValue,
+    },
+    {
+        type: 'list',
+        name: 'styleScripting',
+        message: 'Choose preferred style scripting:',
+        choices: ['SCSS', 'SASS', 'CSS'],
     },
     {
         type: 'input',
