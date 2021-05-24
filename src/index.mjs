@@ -13,6 +13,7 @@ import {
     reactRouting,
     nextPages,
     writeFolderStructure,
+    writeStyleScripting,
     installAllDependencies,
 } from './scripts/index.mjs';
 
@@ -43,13 +44,14 @@ const init = async () => {
             pages,
             predefinedFolders,
             additionalFolders,
+            styleScripting,
             dependencies,
             devDependencies,
         } = await setup();
 
         // cwd for spawn process and app directory where app would be installed
         const cwd = process.cwd();
-        const appDirectory = `${process.cwd()}/${appName}`;
+        const appDirectory = `${cwd}/${appName}`;
 
         // notify user about the app directory
         console.log(
@@ -76,6 +78,10 @@ const init = async () => {
                 appDirectory
             );
         }
+
+        // Set up style preferred scripting
+        if (styleScripting !== 'CSS')
+            writeStyleScripting(styleScripting, framework, appDirectory);
 
         // install dependencies and dev dependencies
         if (dependencies || devDependencies) {
