@@ -27,12 +27,12 @@ Depending on the fact that Framework is chosen, different questions will be aske
     Choose if react routes is needed. Yes or No.<br />
     If required, enter space separated routes names.
 
-    ✅ Valid App Names::
+    ✅ Valid Route Names::
 
     -   my-route
     -   one-two-three
 
-    ❌ Invalid App Names:
+    ❌ Invalid Route Names:
 
     -   My-Route:
     -   one-2-three
