@@ -17,9 +17,9 @@ export const installNextJs = {
 export const routesMkdir = {
     cmd: 'mkdir',
     args: [],
-    msg: 'Creating pages directory',
-    success: 'Pages directory created successfully',
-    err: 'Error to create pages directory',
+    msg: 'Set up pages directory',
+    success: 'Pages directory set up successfully',
+    err: 'Error to set up pages directory',
 };
 
 export const installDependencies = (dependencies) => {
