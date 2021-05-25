@@ -81,7 +81,7 @@ const init = async () => {
 
         // Set up style preferred scripting
         if (styleScripting !== 'CSS')
-            writeStyleScripting(styleScripting, framework, appDirectory);
+            await writeStyleScripting(styleScripting, framework, appDirectory);
 
         // install dependencies and dev dependencies
         if (dependencies || devDependencies) {
