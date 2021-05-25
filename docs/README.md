@@ -13,11 +13,12 @@ See the [Quick start](quickstart.md) guide for more details.
 
 ## Features 🎉
 
--   Create a react.js or next.js app.
+-   Create a react.js or next.js app. ⚛️
 -   Choose from commonly used folders (assets, components, hooks, services, utils, e.t.c.) to create.
--   Or create folders with custom names.
+-   Or create folders with custom names.📂
 -   Setup routing with user defined routes if you choose react.js.
 -   Or create pages for nextjs.
+-   Add supports popularly used CSS preprocessor SASS! 👓
 -   And installs dependencies and dev dependencies.
 
 ## Donate
