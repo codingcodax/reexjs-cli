@@ -20,11 +20,12 @@ The goal of [ReexJs CLI](https://github.com/a12989x/reexjs-cli) It is that we ca
 
 ## Features 🎉
 
--   Create a react.js or next.js app.
+-   Create a react.js or next.js app. ⚛️
 -   Choose from commonly used folders (assets, components, hooks, services, utils, e.t.c.) to create.
--   Or create folders with custom names.
+-   Or create folders with custom names.📂
 -   Setup routing with user defined routes if you choose react.js.
 -   Or create pages for nextjs.
+-   Add supports popularly used CSS preprocessor SASS! 👓
 -   And installs dependencies and dev dependencies.
 
 ## Requirements 📝
@@ -65,7 +66,8 @@ Then you have to answer some questions to configure your react.js or next.js app
 Depending on the fact that Framework is chosen, different questions will be asked:
 
 -   **App Name**:<br />
-    Enter your app name. By default it fallbacks to `reexjs-app` <br /><br />
+    Enter your app name. By default it fallbacks to _reexjs-app_.
+    <br /><br />
     ✅ Valid App Names:
 
     -   my-app
@@ -79,7 +81,7 @@ Depending on the fact that Framework is chosen, different questions will be aske
     -   One-2-Three
 
 -   **Framework**:<br />
-    Choose the Framework of your application.
+    Choose the Framework of your application. _Next.js_ or _React.js_.
 
 -   **Pages Names**: (_Next.Js_)<br />
     Enter space separated pages for next.js application.
@@ -88,12 +90,12 @@ Depending on the fact that Framework is chosen, different questions will be aske
     Choose if react routes is needed. Yes or No.<br />
     If required, enter space separated routes names.
 
-    ✅ Valid App Names::
+    ✅ Valid Route Names:
 
     -   my-route
     -   one-two-three
 
-    ❌ Invalid App Names:
+    ❌ Invalid Route Names:
 
     -   My-Route:
     -   one-2-three
@@ -105,10 +107,13 @@ Depending on the fact that Framework is chosen, different questions will be aske
 
     -   Predefined:
 
-        -   You can choose from commonly use folders to create: `assets`, `components`, `utils`, `lib`.
+        -   You can choose from commonly use folders to create: _assets_, _components_, _utils_, _lib_.
 
     -   Custom:
-        -   You can enter space separated folders. The conventions would be same as routes in react routing.
+        -   You can enter space separated folders. The conventions would be same as routes in react routing. E.g. `context hooks`
+
+-   **Style scripting**:<br />
+    Choose if you want use SASS preprocessor in your styles. _SCSS_, _SASS_ or _CSS_.
 
 -   **Dependencies**: (`npm i <dependencies>`)<br />
     You can enter space separated dependencies. The conventions would be same as routes in react routing. E.g. `react-bootstrap lodash moment`.
@@ -119,12 +124,11 @@ Depending on the fact that Framework is chosen, different questions will be aske
 
 ### TODOs ✅
 
--   Get notification every time an update is available 🔔.
--   Choose JavaScript and TypeScript 🔥.
--   Choose preferred export type: named or default 🤔.
--   Add supports popularly used CSS preprocessor SASS! 👓
--   Add Redux/MobX/useContext state management setup ⚙️.
--   Style your app EXACTLY Like Google 😎.
+-   Get notification every time an update is available. 🔔
+-   Choose JavaScript and TypeScript. 🔥
+-   Choose preferred export type: named or default. 🤔
+-   Add Redux/MobX/useContext state management setup. ⚙️
+-   Style your app EXACTLY Like Google. 😎
 
 ## License
 
