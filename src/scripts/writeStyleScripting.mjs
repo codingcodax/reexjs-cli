@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync, unlinkSync } from 'fs';
+import ora from 'ora';
 
 import runSpawn from '../utils/runSpawn.mjs';
 import { installDependencies } from '../constants/commands.mjs';
@@ -21,6 +22,9 @@ const writeStyleScripting = async (styleScripting, framework, appDirectory) => {
     const stylesJavascriptNames = isNextJs
         ? ['_app', 'index']
         : ['index', 'App'];
+
+    const spinner = ora('Set up style scripting...').start();
+    spinner.color = 'magenta';
 
     const changeFilesExtension = (files, directory) => {
         files.map((file) => {
@@ -48,10 +52,16 @@ const writeStyleScripting = async (styleScripting, framework, appDirectory) => {
         });
     };
 
-    changeFilesExtension(stylesFileNames, stylesDirectory);
-    replaceFileExtension(stylesJavascriptNames, stylesJavascriptDirectory);
+    try {
+        changeFilesExtension(stylesFileNames, stylesDirectory);
+        replaceFileExtension(stylesJavascriptNames, stylesJavascriptDirectory);
 
-    await runSpawn(installDependencies('sass'), null, appDirectory);
+        await runSpawn(installDependencies('sass'), null, appDirectory, false);
+
+        spinner.succeed('Style scripting set up successfully!');
+    } catch (err) {
+        spinner.fail('Failed to set up style scripting');
+    }
 };
 
 export default writeStyleScripting;

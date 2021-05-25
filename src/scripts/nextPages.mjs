@@ -1,4 +1,5 @@
 import { writeFileSync } from 'fs';
+import ora from 'ora';
 
 import pagesTemplate from '../constants/templates/pagesTemplate.mjs';
 import { capitalizeFirstLetter } from '../utils/helpers.mjs';
@@ -9,16 +10,21 @@ const nextPages = (pages, appName, appDirectory) => {
         .map((route) => capitalizeFirstLetter(route))
         .filter((page) => page !== 'Home');
 
+    const spinner = ora('Set up pages...').start();
+    spinner.color = 'magenta';
+
     // create next pages components
     try {
-        const data = pagesArray.map((page) => {
+        pagesArray.map((page) => {
             writeFileSync(
                 `${appDirectory}/pages/${page.toLowerCase()}.js`,
                 pagesTemplate(page)
             );
         });
+
+        spinner.succeed('Pages set up successfully!');
     } catch (err) {
-        console.error(err);
+        spinner.fail('Failed to set up pages');
     }
 };
 
