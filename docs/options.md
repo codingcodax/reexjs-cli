@@ -18,7 +18,7 @@ Depending on the fact that Framework is chosen, different questions will be aske
     -   One-2-Three
 
 -   **Framework**:<br />
-    Choose the Framework of your application.
+    Choose the Framework of your application. _Next.js_ or _React.js_.
 
 -   **Pages Names**: (_Next.Js_)<br />
     Enter space separated pages for next.js application.
@@ -27,7 +27,7 @@ Depending on the fact that Framework is chosen, different questions will be aske
     Choose if react routes is needed. Yes or No.<br />
     If required, enter space separated routes names.
 
-    ✅ Valid Route Names::
+    ✅ Valid Route Names:
 
     -   my-route
     -   one-two-three
@@ -44,10 +44,13 @@ Depending on the fact that Framework is chosen, different questions will be aske
 
     -   Predefined:
 
-        -   You can choose from commonly use folders to create: `assets`, `components`, `utils`, `lib`.
+        -   You can choose from commonly use folders to create: _assets_, _components_, _utils_, _lib_.
 
     -   Custom:
-        -   You can enter space separated folders. The conventions would be same as routes in react routing.
+        -   You can enter space separated folders. The conventions would be same as routes in react routing. E.g. `context hooks`
+
+-   **Style scripting**:<br />
+    Choose if you want use SASS preprocessor in your styles. _SCSS_, _SASS_ or _CSS_.
 
 -   **Dependencies**: (`npm i <dependencies>`)<br />
     You can enter space separated dependencies. The conventions would be same as routes in react routing. E.g. `react-bootstrap lodash moment`.
