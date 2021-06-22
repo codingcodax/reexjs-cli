@@ -1,54 +1,55 @@
 {
-    "name": "reexjs-cli",
-    "version": "1.1.0",
-    "description": "An interactive CLI automation tool 🛠️ for creating react.js and next.js projects most fast and efficiently. ⚛️",
-    "main": "lib/index.mjs",
-    "bin": {
-        "reexjs-cli": "lib/index.mjs"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node --experimental-json-modules src/index.mjs start",
-        "build": "node --experimental-json-modules src/scripts/minify.mjs start"
-    },
-    "keywords": [
-        "automatization",
-        "nextjs",
-        "reactjs",
-        "react-router-dom",
-        "cli",
-        "es6",
-        "tool",
-        "react"
-    ],
-    "files": [
-        "lib"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/a12989x/reexjs-cli.git"
-    },
-    "author": "Alexis Guzman codaxtech@gmail.com https://codax.vercel.app/",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/a12989x/reexjs-cli/issues"
-    },
-    "type": "module",
-    "homepage": "https://github.com/a12989x/reexjs-cli#readme",
-    "dependencies": {
-        "chalk": "^4.1.1",
-        "figlet": "^1.5.0",
-        "glob": "^7.1.7",
-        "inquirer": "^8.0.0",
-        "ora": "^5.4.0"
-    },
-    "devDependencies": {
-        "cz-conventional-changelog": "^3.3.0",
-        "terser": "^5.7.0"
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
-    }
+	"name": "reexjs-cli",
+	"version": "1.1.0",
+	"description": "An interactive CLI automation tool 🛠️ for creating react.js and next.js projects most fast and efficiently. ⚛️",
+	"main": "lib/index.mjs",
+	"bin": {
+		"reexjs-cli": "lib/index.mjs"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node --experimental-json-modules src/cli.mjs",
+		"build": "node --experimental-json-modules src/scripts/minify.mjs start"
+	},
+	"keywords": [
+		"automatization",
+		"nextjs",
+		"reactjs",
+		"react-router-dom",
+		"cli",
+		"es6",
+		"tool",
+		"react"
+	],
+	"files": [
+		"lib"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/a12989x/reexjs-cli.git"
+	},
+	"author": "Alexis Guzman codaxtech@gmail.com https://codax.vercel.app/",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/a12989x/reexjs-cli/issues"
+	},
+	"type": "module",
+	"homepage": "https://github.com/a12989x/reexjs-cli#readme",
+	"dependencies": {
+		"chalk": "^4.1.1",
+		"figlet": "^1.5.0",
+		"glob": "^7.1.7",
+		"inquirer": "^8.0.0",
+		"meow": "^10.0.1",
+		"ora": "^5.4.0"
+	},
+	"devDependencies": {
+		"cz-conventional-changelog": "^3.3.0",
+		"terser": "^5.7.0"
+	},
+	"config": {
+		"commitizen": {
+			"path": "./node_modules/cz-conventional-changelog"
+		}
+	}
 }
