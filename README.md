@@ -122,6 +122,12 @@ Depending on the fact that Framework is chosen, different questions will be aske
 -   **Dev Dependencies**: (`npm i -D <devDependencies>`)<br />
     You can enter separated dev dependencies. The conventions would be same as routes in react routing. E.g. `prettier husky lint-staged`.
 
+### Examples 🤖
+
+-   `npx reexjs-cli`. Run reexjs normally.
+-   `npx reexjs-cli -n` Run reexjs with next default configuration.
+-   `npx reexjs-cli -r` Run reexjs with react default configuration.
+
 ### TODOs ✅
 
 -   Get notification every time an update is available. 🔔
