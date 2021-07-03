@@ -1,8 +1,8 @@
 import { writeFileSync } from 'fs';
 import ora from 'ora';
 
-import pagesTemplate from '../constants/templates/pagesTemplate.mjs';
-import { capitalizeFirstLetter } from '../utils/helpers.mjs';
+import pagesTemplate from '../constants/templates/pagesTemplate.js';
+import { capitalizeFirstLetter } from '../utils/helpers.js';
 
 const nextPages = (pages, appName, appDirectory) => {
     const pagesArray = pages

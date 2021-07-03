@@ -1,9 +1,9 @@
 import { readFileSync, writeFileSync, unlinkSync } from 'fs';
 import ora from 'ora';
 
-import runSpawn from '../utils/runSpawn.mjs';
-import { installDependencies } from '../constants/commands.mjs';
-import { replaceFontFamilySass } from '../utils/replace.mjs';
+import runSpawn from '../utils/runSpawn.js';
+import { installDependencies } from '../constants/commands.js';
+import { replaceFontFamilySass } from '../utils/replace.js';
 
 const writeStyleScripting = async (styleScripting, framework, appDirectory) => {
     const isNextJs = framework === 'Next.js' ? true : false;

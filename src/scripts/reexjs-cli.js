@@ -1,6 +1,6 @@
 import chalk from 'chalk';
 
-import { messages } from '../messages.mjs';
+import { messages } from '../messages.js';
 
 import {
 	installFramework,
@@ -9,7 +9,7 @@ import {
 	writeFolderStructure,
 	writeStyleScripting,
 	installAllDependencies,
-} from './index.mjs';
+} from './index.js';
 
 const reexJsCli = async (
 	appName,

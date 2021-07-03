@@ -1,10 +1,10 @@
 import { mkdirSync, writeFileSync } from 'fs';
 
-import { installDependencies, routesMkdir } from '../constants/commands.mjs';
-import pagesTemplate from '../constants/templates/pagesTemplate.mjs';
-import appJsTemplate from '../constants/templates/appJsTemplate.mjs';
-import runSpawn from '../utils/runSpawn.mjs';
-import { capitalizeFirstLetter } from '../utils/helpers.mjs';
+import { installDependencies, routesMkdir } from '../constants/commands.js';
+import pagesTemplate from '../constants/templates/pagesTemplate.js';
+import appJsTemplate from '../constants/templates/appJsTemplate.js';
+import runSpawn from '../utils/runSpawn.js';
+import { capitalizeFirstLetter } from '../utils/helpers.js';
 
 const reactRouting = async (routes, appName, appDirectory) => {
     const routesArray = routes

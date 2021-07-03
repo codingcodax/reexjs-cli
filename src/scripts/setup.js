@@ -1,5 +1,5 @@
 import inquirer from 'inquirer';
-import { validateValue, checkUpper } from '../utils/validate.mjs';
+import { validateValue, checkUpper } from '../utils/validate.js';
 
 const questions = [
     {

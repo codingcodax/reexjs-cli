@@ -1,6 +1,6 @@
-import runSpawn from '../utils/runSpawn.mjs';
+import runSpawn from '../utils/runSpawn.js';
 
-import { installReactJs, installNextJs } from '../constants/commands.mjs';
+import { installReactJs, installNextJs } from '../constants/commands.js';
 
 const installFramework = async (framework, appName, cwd) => {
     if (framework === 'React.js') await runSpawn(installReactJs, appName, cwd);

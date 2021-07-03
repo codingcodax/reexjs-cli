@@ -1,8 +1,8 @@
 import {
     installDependencies,
     installDevDependencies,
-} from '../constants/commands.mjs';
-import runSpawn from '../utils/runSpawn.mjs';
+} from '../constants/commands.js';
+import runSpawn from '../utils/runSpawn.js';
 
 const installAllDependencies = async (
     dependencies,

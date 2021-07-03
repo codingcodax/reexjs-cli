@@ -2,14 +2,14 @@
 	"name": "reexjs-cli",
 	"version": "1.1.0",
 	"description": "An interactive CLI automation tool 🛠️ for creating react.js and next.js projects most fast and efficiently. ⚛️",
-	"main": "lib/index.mjs",
+	"main": "lib/index.js",
 	"bin": {
-		"reexjs-cli": "lib/index.mjs"
+		"reexjs-cli": "lib/index.js"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node --experimental-json-modules src/cli.mjs",
-		"build": "node --experimental-json-modules src/scripts/minify.mjs start"
+		"start": "node src/cli.js",
+		"build": "node src/scripts/minify.js"
 	},
 	"keywords": [
 		"automatization",
