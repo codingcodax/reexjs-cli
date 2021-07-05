@@ -2,9 +2,9 @@
 	"name": "reexjs-cli",
 	"version": "1.1.0",
 	"description": "An interactive CLI automation tool 🛠️ for creating react.js and next.js projects most fast and efficiently. ⚛️",
-	"main": "lib/index.js",
+	"main": "lib/cli.js",
 	"bin": {
-		"reexjs-cli": "lib/index.js"
+		"reexjs-cli": "lib/cli.js"
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
@@ -37,10 +37,10 @@
 	"homepage": "https://github.com/a12989x/reexjs-cli#readme",
 	"dependencies": {
 		"chalk": "^4.1.1",
+		"commander": "^2.20.3",
 		"figlet": "^1.5.0",
 		"glob": "^7.1.7",
 		"inquirer": "^8.0.0",
-		"meow": "^10.0.1",
 		"ora": "^5.4.0"
 	},
 	"devDependencies": {
