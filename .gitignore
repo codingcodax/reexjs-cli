@@ -117,3 +117,6 @@ dist
 
 # package-lock.json file
 package-lock.json
+
+# lib folder
+lib
