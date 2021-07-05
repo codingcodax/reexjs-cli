@@ -12,7 +12,7 @@ const init = async () => {
     // set up options
     program
         .name('reexjs-cli')
-        .usage('[-n, -r] command')
+        .usage('[-n, -r] <app-name>')
         .option(
             '-n, --is-next-js [type]',
             'Create Next.js app with default ReexJs options.'
