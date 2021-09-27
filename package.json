@@ -1,65 +1,65 @@
 {
-	"name": "reexjs-cli",
-	"version": "1.2.2",
-	"description": "An interactive CLI automation tool 🛠️ for creating react.js and next.js projects most fast and efficiently. ⚛️",
-	"main": "lib/cli.js",
-	"bin": {
-		"reexjs-cli": "lib/cli.js"
-	},
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node src/cli.js",
-		"build": "node src/scripts/minify.js"
-	},
-	"keywords": [
-		"automatization",
-		"nextjs",
-		"reactjs",
-		"react-router-dom",
-		"cli",
-		"es6",
-		"tool",
-		"react"
-	],
-	"files": [
-		"lib"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/a12989x/reexjs-cli.git"
-	},
-	"author": "Alexis Guzman codaxtech@gmail.com https://codax.vercel.app/",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/a12989x/reexjs-cli/issues"
-	},
-	"type": "module",
-	"homepage": "https://github.com/a12989x/reexjs-cli#readme",
-	"dependencies": {
-		"chalk": "^4.1.1",
-		"commander": "^2.20.3",
-		"figlet": "^1.5.0",
-		"glob": "^7.1.7",
-		"inquirer": "^8.0.0",
-		"ora": "^5.4.0"
-	},
-	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^4.31.2",
-		"cz-conventional-changelog": "^3.3.0",
-		"eslint": "^7.32.0",
-		"eslint-config-google": "^0.14.0",
-		"eslint-config-prettier": "^8.3.0",
-		"eslint-plugin-prettier": "^4.0.0",
-		"husky": "^7.0.2",
-		"nodemon": "^2.0.13",
-		"prettier": "^2.4.1",
-		"terser": "^5.7.0",
-		"ts-node": "^10.2.1",
-		"typescript": "^4.4.3"
-	},
-	"config": {
-		"commitizen": {
-			"path": "./node_modules/cz-conventional-changelog"
-		}
-	}
+  "name": "reexjs-cli",
+  "version": "1.2.2",
+  "description": "An interactive CLI automation tool 🛠️ for creating react.js and next.js projects most fast and efficiently. ⚛️",
+  "main": "lib/cli.js",
+  "bin": {
+    "reexjs-cli": "lib/cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx ts-node src/index.ts",
+    "lint": "npx eslint 'src/**/*.ts'"
+  },
+  "keywords": [
+    "automatization",
+    "nextjs",
+    "reactjs",
+    "react-router-dom",
+    "cli",
+    "es6",
+    "tool",
+    "react"
+  ],
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a12989x/reexjs-cli.git"
+  },
+  "author": "Alexis Guzman codaxtech@gmail.com https://codax.vercel.app/",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a12989x/reexjs-cli/issues"
+  },
+  "homepage": "https://github.com/a12989x/reexjs-cli#readme",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^2.20.3",
+    "figlet": "^1.5.0",
+    "glob": "^7.1.7",
+    "inquirer": "^8.0.0",
+    "ora": "^5.4.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.31.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.2",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1",
+    "terser": "^5.7.0",
+    "ts-node": "^10.2.1",
+    "typescript": "^4.4.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
