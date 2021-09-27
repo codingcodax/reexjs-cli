@@ -1,0 +1,17 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo '🏗️👷 Checking commit, styling, testing and building your project before committing
+'
+
+# Check ESLint
+npm run lint ||
+(
+  echo '😡😒👺 OMG! make that s**t really work! 😡😒👺
+    ES Lint Check Failed. Make the required changes listed above, add changes and try to commit again.'
+	false;
+)
+
+# If everything passes... Now we can commit
+echo '✅✅✅✅ You win this time... I am trying to committ this now. 🤯 ✅✅✅✅'
+
