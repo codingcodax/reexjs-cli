@@ -44,8 +44,18 @@
 		"ora": "^5.4.0"
 	},
 	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^4.31.2",
 		"cz-conventional-changelog": "^3.3.0",
-		"terser": "^5.7.0"
+		"eslint": "^7.32.0",
+		"eslint-config-google": "^0.14.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"husky": "^7.0.2",
+		"nodemon": "^2.0.13",
+		"prettier": "^2.4.1",
+		"terser": "^5.7.0",
+		"ts-node": "^10.2.1",
+		"typescript": "^4.4.3"
 	},
 	"config": {
 		"commitizen": {

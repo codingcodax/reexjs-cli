@@ -1,8 +1,0 @@
-{
-	"pagesRoutes": "home about contact",
-	"predefinedFolders": ["assets", "components", "utils", "lib"],
-	"additionalFolders": "context hooks",
-	"styleScripting": "SCSS",
-	"dependencies": "react-bootstrap lodash moment",
-	"devDependencies": "prettier husky lint-staged eslint"
-}
