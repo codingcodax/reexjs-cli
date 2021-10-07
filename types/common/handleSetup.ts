@@ -1,0 +1,11 @@
+export type AppName = string;
+export type AppDirectory = string;
+export type Framework = string;
+export type IsRoutingNeeded = string;
+export type Routes = string;
+export type Pages = string;
+export type PredefinedFolders = string[];
+export type AdditionalFolders = string;
+export type StyleScripting = string;
+export type Dependencies = string;
+export type DevDependencies = string;
