@@ -28,6 +28,11 @@ const createNextPages: CreateNextPages = (pages, framework, appDirectory) => {
       );
     });
 
+    writeFileSync(
+      `${appDirectory}/pages/index.${framework === 'Next' ? 'js' : 'tsx'}`,
+      (framework === 'Next' ? next.page : next.pagets).replace(/TITLE/g, 'Home')
+    );
+
     spinner.succeed('Pages set up successfully!');
   } catch (err) {
     spinner.fail('Failed to set up pages');
