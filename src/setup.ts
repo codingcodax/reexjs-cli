@@ -58,7 +58,7 @@ const setup: Setup = async (
 
   // set up style preferred scripting
   if (styleScripting !== 'CSS')
-    writeStyleScripting(styleScripting, framework, appDirectory);
+    await writeStyleScripting(styleScripting, framework, appDirectory);
 
   // install normal dependencies and dev dependencies
   if (dependencies || devDependencies)
