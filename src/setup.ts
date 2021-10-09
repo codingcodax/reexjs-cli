@@ -42,10 +42,10 @@ const setup: Setup = async (
 
   // set up routes if is needed for React/React(TS) framework
   if (isRoutingNeeded)
-    await writeReactRouting(routes, framework, appName, appDirectory);
+    await writeReactRouting(routes, framework, styleScripting, appDirectory);
 
   // set up pages for Next/Next(TS) framework
-  if (pages) createNextPages(pages, framework, appDirectory);
+  if (pages) createNextPages(pages, framework, styleScripting, appDirectory);
 
   // set up folder structure
   if (predefinedFolders.length !== 0 || additionalFolders)
