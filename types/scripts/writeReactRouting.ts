@@ -1,9 +1,9 @@
-import { Routes, AppName, AppDirectory, Framework } from '../';
+import { Routes, StyleScripting, AppDirectory, Framework } from '../';
 
 type WriteReactRouting = (
   routes: Routes,
   framework: Framework,
-  appName: AppName,
+  styleScripting: StyleScripting,
   appDirectory: AppDirectory
 ) => void;
 
