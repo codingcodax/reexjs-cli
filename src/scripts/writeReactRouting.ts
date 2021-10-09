@@ -15,7 +15,7 @@ import { capitalizeFirstLetter } from '../utils/capitalizeFirstLetter';
 const writeReactRouting: WriteReactRouting = async (
   routes,
   framework,
-  appName,
+  styleScripting,
   appDirectory
 ) => {
   const routesArray = routes
@@ -49,7 +49,10 @@ const writeReactRouting: WriteReactRouting = async (
     routesArray.map((route) => {
       writeFileSync(
         `${appDirectory}/src/components/pages/${route}.js`,
-        templates.react.route.replace(/TITLE/g, capitalizeFirstLetter(route))
+        (styleScripting === 'Chakra UI'
+          ? templates.common.pageChakra
+          : templates.common.page
+        ).replace(/TITLE/g, capitalizeFirstLetter(route))
       );
     });
 
