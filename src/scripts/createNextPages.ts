@@ -7,7 +7,12 @@ import templates from '../templates';
 import arrayFromString from '../utils/arrayFromString';
 import { capitalizeFirstLetter } from '../utils/capitalizeFirstLetter';
 
-const createNextPages: CreateNextPages = (pages, framework, appDirectory) => {
+const createNextPages: CreateNextPages = (
+  pages,
+  framework,
+  styleScripting,
+  appDirectory
+) => {
   const pagesArray = arrayFromString(pages, ' ');
 
   // initialize spinner
@@ -16,21 +21,27 @@ const createNextPages: CreateNextPages = (pages, framework, appDirectory) => {
 
   // create page components
   try {
-    const { next } = templates;
+    const { next, common } = templates;
+
+    const data =
+      framework === 'Next'
+        ? styleScripting === 'Chakra UI'
+          ? common.pageChakra
+          : common.page
+        : styleScripting === 'Chakra UI'
+        ? next.ts.pageChakra
+        : next.ts.page;
 
     pagesArray.map((page) => {
       writeFileSync(
         `${appDirectory}/pages/${page}.${framework === 'Next' ? 'js' : 'tsx'}`,
-        (framework === 'Next' ? next.page : next.pagets).replace(
-          /TITLE/g,
-          capitalizeFirstLetter(page)
-        )
+        data.replace(/TITLE/g, capitalizeFirstLetter(page))
       );
     });
 
     writeFileSync(
       `${appDirectory}/pages/index.${framework === 'Next' ? 'js' : 'tsx'}`,
-      (framework === 'Next' ? next.page : next.pagets).replace(/TITLE/g, 'Home')
+      data.replace(/TITLE/g, 'Home')
     );
 
     spinner.succeed('Pages set up successfully!');
