@@ -1,8 +1,6 @@
 import { capitalizeFirstLetter } from '../utils/capitalizeFirstLetter';
 
 const react = {
-  route:
-    'const TITLE = () => {\n  return (\n    <section>\n      <p>TITLE Page</p>\n    </section>\n    );\n};\n\nexport default TITLE;',
   app: (routesArray: string[]): string => {
     const routes = routesArray.map((route) => capitalizeFirstLetter(route));
 
