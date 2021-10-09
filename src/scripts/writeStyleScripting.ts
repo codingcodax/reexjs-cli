@@ -54,15 +54,35 @@ const writeStyleScripting: WriteStyleScripting = async (
         );
       }
     } else if (styleScripting === 'Chakra UI') {
+      // install dependencies
+      await run(
+        installDependencies,
+        [
+          '@chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^4',
+        ],
+        false,
+        appDirectory
+      );
+
       if (framework === 'Next' || framework === 'Next (TS)') {
-        console.log('Setting chakra ui for nextjs');
+        // edit _app file with Chakra template
+        writeFileSync(
+          `${appDirectory}/pages/_app.${framework === 'Next' ? 'js' : 'tsx'}`,
+          templates.next.app
+        );
       } else if (framework === 'React' || framework === 'React (TS)') {
-        console.log('Setting chakra ui for reactjs');
+        // edit index file with Chakra template
       }
     } else if (styleScripting === 'Tailwind CSS') {
+      // install dependencies
+
       if (framework === 'Next' || framework === 'Next (TS)') {
         console.log('Setting tailwind fro nextjs');
+        // edit _app file
+        // remove styles folder
       } else if (framework === 'React' || framework === 'React (TS)') {
+        // edit index file
+        // remove styles folder
         console.log('Setting tailwind fro reactjs');
       }
     }
